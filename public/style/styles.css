@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #F5E7DE;
+    color:black;
+  }
+  
+  header {
+    background: #F2BFA4;
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+  }
+  
+  nav a {
+    margin-right: 1rem;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  #menu-items, #event-list {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  form input, form button {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+  }
+  
