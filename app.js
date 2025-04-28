@@ -10,3 +10,5 @@ app.listen(port, () => console.log(message))
 app.use(express.json())
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }));
+
+app.use(require('./routes/static'))
