@@ -11,4 +11,8 @@ app.use(express.json())
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }));
 
-app.use(require('./routes/static'))
+//setup backend routes
+app.use('/api/v1', require('./routes/api/v1/foodtruck'))
+
+//setup frontend routes
+app.use('/',require('./routes/static'))
