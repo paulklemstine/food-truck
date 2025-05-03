@@ -28,6 +28,7 @@ body {
   
   #menu-items, #event-list {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
   }
   
@@ -37,5 +38,13 @@ body {
     padding: 0.5rem;
     width: 100%;
     max-width: 400px;
+  }
+
+  div div{
+    border: 2px solid black;
+  }
+
+  #menu-items img {
+    width: 200px;
   }
   

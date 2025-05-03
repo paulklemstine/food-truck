@@ -8,6 +8,7 @@ const getMenu = async () =>{
     return collectionMenu
 }
 
+
 const getEvents = async () =>{
     if (!collectionEvents) collectionEvents = await getCollection('food-truck','events')
     return collectionEvents
