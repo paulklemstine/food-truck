@@ -1,0 +1,30 @@
+###
+Variables @url = http://localhost:3000/
+@apiUrl = http://localhost:3000/api/v1
+
+
+
+
+
+
+### Add New Menu Item
+POST {{apiUrl}}/menu/add
+Content-Type: application/json
+
+{
+    "name": "Chili Cheese Fries",
+    "description": "Crispy Fries topped with chili and shredded cheese",
+    "price": "5.99" ,
+    "url": "https://image.pollinations.ai/prompt/chillie+cheese+fries+food+truck?width=640&height=480&seed=1870&nologo=true&safe=true"
+}
+
+### Add New Event
+POST {{apiUrl}}/events/add
+Content-Type: application/json
+
+{
+    "name": "Street Food Festival",
+    "location": "Houdini Plaza",
+    "date": "7/16/25",
+    "time": "6:00PM"
+}
