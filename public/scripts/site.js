@@ -43,7 +43,7 @@
             json.forEach(({_id, name, location, date, time}) => {
                 const div = document.createElement('div')
                 const h2 = document.createElement('h2')
-                    h2.innerHTML = `<a href ="#" onclick="event.preventDefault();showEventDetails('${_id}'); return false;">${name}</a>`
+                    h2.innerHTML = `<a href ="#" class="brown" onclick="event.preventDefault();showEventDetails('${_id}'); return false;">${name}</a>`
 
                 const span = document.createElement('span')
                     span.textContent = location
@@ -54,9 +54,14 @@
                 const span3 = document.createElement('span')
                     span3.textContent = time
                     
+                    const br1 = document.createElement("br");
+                    const br2 = document.createElement("br");
+                    const br3 = document.createElement("br");
                     div.appendChild(h2)
                     div.appendChild(span)
+                    div.appendChild(br2)
                     div.appendChild(span2)
+                    div.appendChild(br3)
                     div.appendChild(span3)
 
                 events.appendChild(div)
@@ -94,7 +99,6 @@
         }
         const response = await fetch('/api/v1/events/'+id)
         const {name,location,date,time}  = await response.json()
-    console.log(name)
         modalElements.name.textContent = name
         modalElements.location.textContent = location
         modalElements.date.textContent = date

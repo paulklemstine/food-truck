@@ -81,6 +81,12 @@ h2 {
   color: #b34700
 }
 
+#brown, a{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #b34700
+}
+
 section {
     margin-bottom: 2rem;
 }
