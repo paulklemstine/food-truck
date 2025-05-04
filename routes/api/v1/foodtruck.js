@@ -46,4 +46,20 @@ router.post('/events/add' , async(request, response) => {
     response.send(newEventItem)
 })
 
+router.get('/menu/:id', async (request,response)=>{
+    const {id} = request.params
+    const collection = await getMenu()
+    const found = await collection.findOne({ _id: new ObjectId(id) })
+    if (found) response.send(found)
+    else response.send({ error: { message: `Could not find menu item with id: ${id}` }})
+})
+
+router.get('/events/:id', async (request,response)=>{
+    const {id} = request.params
+    const collection = await getEvents()
+    const found = await collection.findOne({ _id: new ObjectId(id) })
+    if (found) response.send(found)
+    else response.send({ error: { message: `Could not find menu item with id: ${id}` }})
+})
+
 module.exports = router

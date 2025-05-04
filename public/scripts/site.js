@@ -3,7 +3,7 @@
     (async ()=> {
 
         const menu = document.querySelector('#menu-items')
-    
+        
         const getMenu = async () => {
 
             const response = await fetch('/api/v1/menu')
@@ -40,10 +40,10 @@
             const response = await fetch('/api/v1/events')
             const json = await response.json()
             
-            json.forEach(({name, location, date, time}) => {
+            json.forEach(({_id, name, location, date, time}) => {
                 const div = document.createElement('div')
                 const h2 = document.createElement('h2')
-                    h2.textContent = name
+                    h2.innerHTML = `<a href ="#" onclick="event.preventDefault();showEventDetails('${_id}'); return false;">${name}</a>`
 
                 const span = document.createElement('span')
                     span.textContent = location
@@ -64,13 +64,44 @@
         }
         getEvents()
             
-    
+       
+
+        const closeButton = document.querySelector(".close-button")
+       
+        closeButton.onclick = () => {
+            const modal = document.getElementById("eventModal")
+            modal.style.display = 'none'
+        }
+
+        window.onclick = event => {
+            const modal = document.getElementById("eventModal")
+            if (event.target === modal) modal.style.display = 'none'
+        }
     
 
+
+
     })()
+
     
+    const showEventDetails = async id => {
+        const modal = document.getElementById("eventModal")
+        const modalElements = {
+            name: document.getElementById('modalName'),
+            location: document.getElementById('modalLocation'),
+            date: document.getElementById('modalDate'),
+            time: document.getElementById('modalTime')
+        }
+        const response = await fetch('/api/v1/events/'+id)
+        const {name,location,date,time}  = await response.json()
+    console.log(name)
+        modalElements.name.textContent = name
+        modalElements.location.textContent = location
+        modalElements.date.textContent = date
+        modalElements.time.textContent = time
     
-    
+        modal.style.display = 'flex'
+    }
 
 
 
