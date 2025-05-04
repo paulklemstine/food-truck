@@ -6,7 +6,8 @@ body {
     color: #2d1e0f;
   }
   
-header, footer {
+header {
+    background: #fcd5b5;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -14,10 +15,25 @@ header, footer {
     text-align: center;
 }
 
-footer h1,header h1 {
+header h1 {
   font-size: 2.5rem;
   color: #a14500;
   margin: 0;
+}
+
+footer {
+  background: #fcd5b5;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+footer h1 {
+font-size: 2.5rem;
+color: #a14500;
+margin: 0;
 }
 
 .logo-title {
@@ -119,11 +135,6 @@ section {
   border-radius: 5px;
 }
 
-#event-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
 
 form {
   background-color: #fff9f3;
