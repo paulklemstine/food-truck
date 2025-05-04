@@ -1,52 +1,173 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: #F5E7DE;
-    color:black;
+    background: #fff4ea;
+    color: #2d1e0f;
   }
   
-  header {
-    background: #F2BFA4;
-    color: rgb(0, 0, 0);
+header {
+    background: #fcd5b5;
     padding: 1rem;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #a14500;
+  margin: 0;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
   
-  nav a {
-    margin-right: 1rem;
+.logo-title img {
+  width: 100px;
+  height: auto;
+}
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+nav {
+  margin-top: 0.5rem;
+  
+}
+
+nav a {
+    margin-right: 1.5rem;
     color: rgb(0, 0, 0);
     text-decoration: none;
-  }
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+  background-color: #ffdab9;
+  color: #b34700;
+  text-decoration: underline;
+}
+
+section {
+  margin-bottom: 3rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ffe1c4;
+}
   
-  main {
+main {
     padding: 2rem;
-  }
+}
+
+main h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: auto;
+  padding-bottom: 40px;
+}
   
-  section {
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #b34700
+}
+
+section {
     margin-bottom: 2rem;
-  }
+}
   
-  #menu-items, #event-list {
+#menu-items, #event-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
   }
-  
-  form input, form button {
+
+#menu-items div, #event-list div {
+    border: 2px solid #c8a27e;
+    background-color: #fffaf6;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+#menu-items div h3 {
+      margin-top: 0;
+}
+
+#menu-items div p {
+    padding: 0.5rem 0;
+}
+
+#menu-items img {
+  width: 100%;
+  max-width: 180px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+#event-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+form {
+  background-color: #fff9f3;
+  padding: 1.5rem;
+  border: 2px solid #ffd5b5;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  max-width: 500px;
+}
+   
+form input, form button {
     display: block;
     margin: 0.5rem 0;
     padding: 0.5rem;
     width: 100%;
     max-width: 400px;
-  }
+}
 
-  div div{
+form button {
+  background-color: #ffa366;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+div div{
     border: 2px solid black;
+}
+
+
+
+
+
+
+@media (max-width: 600px) {
+  .logo-title {
+    flex-direction: column;
   }
 
-  #menu-items img {
-    width: 200px;
+  form input, form button {
+    max-width: 100%;
   }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
 
   /* Modal Styles */
 .modal {
@@ -111,4 +232,3 @@ object-fit: cover;
   font-size: 1.5rem;
   cursor: pointer;
 }
-  
