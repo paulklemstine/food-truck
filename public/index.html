@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale-1">
         <title>Food Truck Final- Home</title>
         <link rel="stylesheet" href="style/styles.css">
+        <script src="/scripts/site.js" defer></script>
     </head>
     <body>
         <header>
@@ -30,7 +31,16 @@
         </section>
     </main>
 
-<script src="/scripts/site.js"></script>
+    <!-- Modal for Event Details -->
+	<div class="modal" id="eventModal">
+		<div class="modal-content">
+			<span class="close-button">&times;</span>
+			<h3 id = "modalName"></h3>
+            <p id = "modalLocation"></p>
+            <p id = "modalDate"></p>
+            <p id = "modalTime"></p>
+		</div>
+	</div>
 
     </body>
  </html>
