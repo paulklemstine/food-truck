@@ -73,16 +73,18 @@
 
         const closeButton = document.querySelector(".close-button")
        
-        closeButton.onclick = () => {
-            const modal = document.getElementById("eventModal")
-            modal.style.display = 'none'
-        }
+        if (closeButton!=null){
+            closeButton.onclick = () => {
+                const modal = document.getElementById("eventModal")
+                modal.style.display = 'none'
+            }
 
-        window.onclick = event => {
-            const modal = document.getElementById("eventModal")
-            if (event.target === modal) modal.style.display = 'none'
-        }
+            window.onclick = event => {
+                const modal = document.getElementById("eventModal")
+                if (event.target === modal) modal.style.display = 'none'
     
+            }
+        }
 
 
 
