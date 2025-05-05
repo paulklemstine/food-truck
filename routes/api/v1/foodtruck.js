@@ -28,7 +28,7 @@ router.get('/events', async (request,response)=>{
     else response.send({ error: { message: 'Could not find any events' }})
 })
 
-router.post('/menu/add' , async(request, response) => {
+router.post('/menu' , async(request, response) => {
     const { name, description, price, url } = request.body
     const newMenuItem = { name, description, price, url}
 
@@ -37,7 +37,7 @@ router.post('/menu/add' , async(request, response) => {
     response.send(newMenuItem)
 })
 
-router.post('/events/add' , async(request, response) => {
+router.post('/events' , async(request, response) => {
     const { name, location, date, time } = request.body
     const newEventItem = { name, location, date, time}
 

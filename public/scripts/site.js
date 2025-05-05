@@ -88,6 +88,52 @@
 
     })()
 
+    document.getElementById('menu-form').addEventListener('submit', async (e) => {
+        e.preventDefault(); 
+        const form = e.target; 
+      
+        const data = {
+          name: form.name.value,
+          description: form.description.value,
+          price: parseFloat(form.price.value),
+          url: form.imageUrl.value
+        };
+
+        await fetch('/api/v1/menu', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+      
+          alert('Menu Item Added!');
+          form.reset();
+       
+      });
+      
+
+
+
+      document.getElementById('event-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+      
+        const form = e.target;
+        const data = {
+          name: form.name.value,
+          location: form.location.value,
+          date: form.date.value,
+          time: form.time.value
+        };
+        await fetch('/api/v1/events', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+      
+          alert('Event added!');
+          form.reset();
+       
+      });
+
     
     const showEventDetails = async id => {
         const modal = document.getElementById("eventModal")
