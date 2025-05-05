@@ -71,9 +71,10 @@
             
        
 
-        const closeButton = document.querySelector(".close-button")
+      
        
-        if (closeButton!=null){
+        if (document.querySelector(".close-button")!=null){
+            const closeButton = document.querySelector(".close-button")
             closeButton.onclick = () => {
                 const modal = document.getElementById("eventModal")
                 modal.style.display = 'none'
@@ -86,10 +87,9 @@
             }
         }
 
-
-
     })()
 
+    if (document.getElementById('menu-form')!=null){
     document.getElementById('menu-form').addEventListener('submit', async (e) => {
         e.preventDefault(); 
         const form = e.target; 
@@ -112,9 +112,9 @@
        
       });
       
+    }
 
-
-
+if (document.getElementById('event-form')!=null){
       document.getElementById('event-form').addEventListener('submit', async (e) => {
         e.preventDefault();
       
@@ -135,7 +135,7 @@
           form.reset();
        
       });
-
+    }
     
     const showEventDetails = async id => {
         const modal = document.getElementById("eventModal")
