@@ -2,13 +2,8 @@
 Variables @url = http://localhost:3000/
 @apiUrl = http://localhost:3000/api/v1
 
-
-
-
-
-
 ### Add New Menu Item
-POST {{apiUrl}}/menu/add
+POST {{apiUrl}}/menu
 Content-Type: application/json
 
 {
@@ -19,7 +14,7 @@ Content-Type: application/json
 }
 
 ### Add New Event
-POST {{apiUrl}}/events/add
+POST {{apiUrl}}/events
 Content-Type: application/json
 
 {
