@@ -34,7 +34,9 @@ router.post('/menu' , async(request, response) => {
 
     const collection = await getMenu()
     const result = await collection.insertOne(newMenuItem)
-    response.send(newMenuItem)
+    
+    //response.send(newMenuItem)
+    response.redirect('../../index.html')
 })
 
 router.post('/events' , async(request, response) => {
@@ -43,7 +45,9 @@ router.post('/events' , async(request, response) => {
 
     const collection = await getEvents()
     const result = await collection.insertOne(newEventItem)
-    response.send(newEventItem)
+
+    //response.send(newEventItem)
+    response.redirect('../../index.html')
 })
 
 router.get('/menu/:id', async (request,response)=>{
