@@ -68,10 +68,6 @@
             }); 
         }
         getEvents()
-            
-       
-
-      
        
         if (document.querySelector(".close-button")!=null){
             const closeButton = document.querySelector(".close-button")
