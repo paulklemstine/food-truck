@@ -53,8 +53,7 @@
 
                 const span3 = document.createElement('span')
                     span3.textContent = time
-                    
-                    const br1 = document.createElement("br");
+                
                     const br2 = document.createElement("br");
                     const br3 = document.createElement("br");
                     div.appendChild(h2)
